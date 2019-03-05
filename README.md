@@ -23,10 +23,12 @@
 
 ### Página de Login
 > A segurança do sistema é feita através des Tokens de autenticação
+
 ![Login](https://user-images.githubusercontent.com/37387374/53827165-3b3cf280-3f59-11e9-96d9-e0f3dea4d2b8.jpg)
 
 ### Página Home
-> Gráficos gerados com ChartJs e dados 
+> Gráficos gerados com ChartJs e dados
+
 ![Home](https://user-images.githubusercontent.com/37387374/53827222-5d367500-3f59-11e9-8dbc-61f6f5f62c07.jpg)
 
 ### Página de procura e cadastro
@@ -38,6 +40,7 @@
 
 ### Estatísticas
 > Gráficos gerados com ChartJs
+
 **Web**<br>
 ![Estatistics Web](https://user-images.githubusercontent.com/37387374/53827413-cae2a100-3f59-11e9-9597-3374a0b5ce1b.jpg)<br><br>
 **Mobile**<br>
