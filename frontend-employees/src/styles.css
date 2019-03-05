@@ -1,0 +1,461 @@
+/* Start CSS navbar */
+
+body{
+    color: rgba(red, green, blue, alpha)
+}
+nav {
+    height: 55px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#main-navbar{
+    width: 100%;
+}
+
+#main-navbar li a{
+    color: white;
+    font-weight: 500;
+}
+
+#main-navbar li a:hover{
+    transition: 0.5s;
+    color: black;
+    background: rgb(255, 179, 0);
+}
+
+.navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.isActive{
+    background: rgba(197, 197, 197, 0.5);
+}
+/* End CSS navbar */
+
+/* Start CSS Index */
+#main-banner{
+    background-image: url('./assets/images/main-banner.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    height: 386px;
+}
+
+#testimony-banner{
+    background-image: url('./assets/images/testimony-banner.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    height: 386px;
+}
+
+.testimony-block{
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-weight: 700;
+    font-size: 1.7em;
+    line-height: 100%;
+}
+
+.testimony-block span{
+    color: white;
+    font-weight: 500;
+    font-size: 0.6em;;
+}
+
+.mt-15{
+    margin-top: 12%;
+}
+
+.text-main-banner{
+    color: white;
+    font-size: 1.5em;
+}
+
+.text-main-banner span{
+    color: #FFEB00;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.btn-font-bold{
+    font-weight: bold;
+}
+
+.main-banner-title{
+    font-size: 1.2em;
+}
+
+.main-banner-subtitle{
+    font-size: 0.8em;
+    color: #807F7E;
+}
+
+footer{
+    color: white;
+    font-size: 0.8em;
+    background: black;
+}
+
+@media (max-width: 768px) { 
+    #main-banner{
+        background-position: 25%;
+    }
+
+    .mt-15{
+        margin-top: 30%;
+    }
+
+    #main-navbar{
+        background:rgba(0, 0, 0, 0.9);
+        margin-top: 2%;
+    }
+ }
+
+/* End CSS Index */
+
+/* Start CSS Login */
+
+ .login{
+     background: #FFFFE5;
+     border: 4px solid #D5B02A;
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
+ }
+
+ .login label{
+    font-weight: bold;
+    color: #E2A812;
+ }
+
+ .login button {
+     background: #E3AD26;
+     border: #634908;
+ }
+
+ .login button:hover {
+    background: rgb(175, 132, 23);
+    color: white;
+    border: #2c2104;
+}
+
+.title-login{
+    color: #8A8A8A;
+    font-size: 2.2em;
+}
+
+.subtitle-login{
+    color: #8A8A8A;
+    font-size: 1.1em;
+}
+
+/* End CSS Login */
+
+/* Start Home */
+
+    #about-info{
+        background: #D5FFDC;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border-radius: 10px;
+    }
+
+    #about-info .title{
+        background: #1B5005;
+        font-weight: 500;
+        color: white;
+        line-height: 40px;
+        font-size: 1.3em;
+        border-radius: 10px;
+    }
+
+    #about-info .box-about{
+        border: #729E45 2px solid;
+        color:#729E45;
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 40px;
+    }
+
+    #about-expenses{
+        background: #FFD5D5;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border-radius: 10px;
+    }
+
+    #about-expenses .title{
+        background: #9E4545;
+        font-weight: 500;
+        color: white;
+        line-height: 40px;
+        font-size: 1.3em;
+        border-radius: 10px;
+    }
+
+    #about-expenses .box-about{
+        color:#9E4545;
+        font-size: 2.7em;
+        line-height: 50px;
+        font-weight: 500;
+    }
+
+    #about-statistics{
+        background: #FFF5D5;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border-radius: 10px;
+    }
+
+    #about-statistics .title{
+        background: #918431;
+        font-weight: 500;
+        color: white;
+        line-height: 35px;
+        font-size: 1.3em;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) { 
+        #about-expenses .box-about{
+            font-size: 2.2em;
+        }
+     }
+/* End Home */
+
+/*  Start Employees */
+
+     .btn-new-employees{
+         background: #D8A01A;
+         color: white;
+         padding: 2%;
+     }
+
+     .btn-new-employees:hover{
+        background: rgb(167, 119, 7);
+        color: white;
+    }
+
+    .card-employee{
+        background: #EBEBEB;
+        box-shadow: 3px 3px 3px rgba(150, 150, 150, 0.363);
+        border-radius: 5px;
+        color: #777777;
+        border: solid 1px rgb(187, 187, 187);
+    }
+
+    .employee-name{
+        font-weight: bold;
+        color: black;;
+    }
+
+    .employee-salary{
+        color: #2B8540;
+        background: #CDDFBA;
+    }
+
+    .btn-employee{
+        background: black;
+        color: white;
+        border-radius: 7px;
+        font-weight: 500;
+        font-size: 0.6em;
+        padding: 2%;
+    }
+
+    .btn-employee:hover{
+        color: #D8A01A;
+        border: solid 1px #D8A01A;
+    }
+
+/* End Employees */
+
+/* Start Employee Detail */
+
+    .box-employee-detail{
+        background-color: #E8E8E8;
+        border: 1px solid #cfcfcf;
+        border-radius: 3px;
+        box-shadow: 3px 3px 3px rgba(99, 94, 94, 0.4);
+    }
+
+    .box-employee-detail .employee-name{
+        font-weight: 500;
+        font-size: 1.7em;
+    }
+
+    .box-employee-detail .employee-office{
+        font-weight: 400;
+        color: #5B5B5B;
+        font-size: 1.1em;
+    }
+
+    .box-employee-detail form{
+        background: #D9D9D9;
+        font-weight: bold;
+    }
+
+    .bg-gray{
+        background: #CBCBCB;
+    }
+
+/* End Employee Detail */
+
+/* Start New Employee */
+
+    .title-new-employee{
+        background: #F3EC95;
+        color: #746C16;
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 40px;
+    }
+
+    .form-new-employee{
+        font-weight: bold;
+        color: #616161;
+        background: rgb(255, 249, 231);
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border: solid 1px rgb(255, 251, 10);
+    }
+
+/* End New Employee */
+
+/* Start Statistics */
+
+    .title-statistics{
+        background: #FFF5D5;
+        color: #8D8742;
+        line-height: 50px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .statistics-employees{
+        background: #CCCCCC;
+        color: #7A7A7A;
+        font-weight: 500;
+        border-radius: 10px;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border: 1px solid rgb(172, 172, 172);
+    }
+
+    .statistics-employees .title{
+        background: #9B9B9B;
+        color: white;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .statistics-gender{
+        background: #F8ADAD;
+        color: #7A7A7A;
+        font-weight: 500;
+        border-radius: 10px;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border: 1px solid rgb(223, 157, 157);
+    }
+
+    .statistics-gender .title{
+        background: #EC7676;
+        color: white;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .higher-salary{
+        background: #64EE8D;
+        border-radius: 10px;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border: 1px solid rgb(152, 255, 169);
+        color: white;
+    }
+
+    .higher-salary .title{
+        background: #64A223;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .higher-salary .name{
+        font-weight: bold;
+    }
+
+    .higher-salary .office{
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    .higher-salary .salary{
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .lower-salary{
+        background: #EE6464;
+        border-radius: 10px;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border: 1px solid rgb(255, 152, 152);
+        color: white;
+    }
+
+    .lower-salary .title{
+        background: #A22323;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .lower-salary .name{
+        font-weight: bold;
+    }
+
+    .lower-salary .office{
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    .lower-salary .salary{
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+ 
+    .avg-salary{
+        background: rgb(114, 100, 238);
+        border-radius: 10px;
+        box-shadow: 5px 5px 2px rgba(150, 150, 150, 0.2);
+        border: 1px solid rgb(152, 154, 255);
+        color: white;
+    }
+
+    .avg-salary .title{
+        background: rgb(35, 37, 162);
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .avg-salary .name{
+        font-weight: bold;
+    }
+
+    .avg-salary .office{
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    .avg-salary .salary{
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    .salaries-info{
+        background: rgb(221, 255, 207);
+        border-radius: 10px;
+    }
+
+    .salaries-info .title{
+        color: white;
+        background: #1B5005;
+        font-weight: 500;
+        line-height: 35px;
+        border-radius: 10px;
+    }
+/* End Statistics */

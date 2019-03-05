@@ -1,0 +1,71 @@
+<section class="container-fluid mb-5" style="margin-top: 90px;">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div id="about-info" class="pb-4">
+          <div class="col-12 text-center title">Sobre a Sua Empresa</div>
+          <div class="col-10 offset-1 box-about mt-4">
+            <div class="row p-2">
+                <div class="col-2 d-none d-sm-block"><img src="./assets/svg/icon-employee.svg" style="width: 30px;" alt=""></div>
+                <div class="col-8 col-sm-5 offset-1">Funcionários</div>
+                <div class="col-1">{{statistics?.qntEmployees}}</div>
+            </div>
+          </div>
+          <div class="col-10 offset-1 box-about mt-3">
+              <div class="row p-2">
+                  <div class="col-2 d-none d-sm-block"><img src="./assets/svg/icon-sectors.svg" style="width: 30px;" alt=""></div>
+                  <div class="col-8 col-sm-5 offset-1">Cargos</div>
+                  <div class="col-1">{{statistics?.qntOffice}}</div>
+              </div>
+          </div>
+          <div class="col-10 offset-1 box-about mt-3">
+              <div class="row p-2">
+                  <div class="col-2 d-none d-sm-block"><img src="./assets/svg/icon-table.svg" style="width: 30px;" alt=""></div>
+                  <div class="col-8 col-sm-5 offset-1">Setores</div>
+                  <div class="col-1">{{statistics?.qntSector}}</div>
+              </div>
+          </div>
+          <div class="col-10 offset-1 box-about mt-3">
+              <div class="row p-2">
+                  <div class="col-2 d-none d-sm-block"><img src="./assets/svg/icon-cancel.svg" style="width: 30px;" alt=""></div>
+                  <div class="col-8 col-sm-5 offset-1">Demissões</div>
+                  <div class="col-1">{{statistics?.qntDemiss}}</div>
+              </div>
+          </div>
+          <div class="col-7 offset-3 mt-3 mb-3">
+              <div class="row p-2 justify-content-center">
+                  <button routerLink="/new-employee" class="btn btn-success btn-block">Novo Funcionário</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+        <div id="about-expenses" class="pb-2">
+            <div class="col-12 title text-center">Gasto Total</div>
+            <div class="col-12 mt-1 box-about">
+              <div class="row text-center text-lg-left">
+                  <div class="col-2 d-none d-sm-block"><img src="./assets/svg/icon-money.svg" style="width: 50px;" alt="gastos"></div>
+                  <div class="col-12 col-sm-10 pl-lg-2"> {{statistics?.totSalary | currency: 'BRL': symbol}}</div>
+              </div>
+            </div>
+        </div>
+
+        <div id="about-statistics" class="pb-2 mt-3">
+            <div class="col-12 title text-center">Estatísticas</div>
+            <div class="col-12 mt-1 box-about">
+              <div class="row text-center text-lg-left">
+                  <canvas id="myChart" height="101"></canvas>
+              </div>
+            </div>
+            <div class="col-6 offset-3 mt-1 box-about mt-4 mb-3">
+                <div class="row justify-content-center">
+                    <button routerLink="/statistics" class="btn btn-warning btn-block">Mais Estatísticas</button>
+                </div>
+              </div>
+        </div>
+        
+      </div>
+      
+
+  </div>
+</section>

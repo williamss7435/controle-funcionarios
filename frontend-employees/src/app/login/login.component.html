@@ -1,0 +1,44 @@
+<!-- Start Login -->
+<section class="container-fluid justify-content-center text-center" style="margin-top: 75px;">
+  <div class="row">
+    <div class="col-12 title-login">
+      Seja Bem Vindo ao nosso Sistema
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 subtitle-login">
+      Não Possui uma conta, <a href="#">clique aqui</a> para fazer a sua conta
+    </div>
+  </div>
+</section>
+<section class="container-fluid">
+  <div class="row justify-content-center">
+
+
+    <div class="col-11 col-lg-4 login">
+      <div class="row justify-content-end">
+        <img src="./assets/svg/logo-small.svg" class="mr-3 mt-3 img-fluid" alt="logo">
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
+        <div class="form-group">
+          <label for="login">Usuário</label>
+          <input [class.is-invalid]="f().user.errors && f().user.touched" [class.is-valid]="!f().user.errors && f().user.touched" formControlName="user" type="text" class="form-control" placeholder="Digite o seu usuário">
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input [class.is-invalid]="f().password.errors && f().password.touched" [class.is-valid]="!f().user.errors && f().user.touched" formControlName="password" type="text" class="form-control" placeholder="Digite a sua senha">
+        </div>
+        <button [disabled]="loginForm.invalid" class="btn btn-font-bold btn-block mb-4">Login</button>
+      </form>
+
+      <div class="col-12 mb-3">
+        <div class="row">
+          <a href="#">(Padrão) Usuário: Admin / Senha: Admin</a>
+        </div>
+      </div>
+
+  </div>
+</div>
+</section>
+<!-- End Login -->

@@ -1,0 +1,85 @@
+<!-- Start Employee Detail -->
+<section class="container-fluid" style="margin-top: 75px;">
+  <div class="col-12 box-employee-detail mb-5">
+    <div class="row mb-1">
+        <div class="col-5 col-sm-2 col-lg-1">
+            <button routerLink="/employees" class="btn btn-dark btn-sm mt-3 btn-block">Voltar</button>
+        </div>
+    </div>
+    <div class="row justify-content-center employee-name">
+      {{employee?.name}}
+    </div>
+    <div class="row justify-content-center employee-office mb-4">
+      {{employee?.office}} {{'('+ employee?.sector + ')'}}
+    </div>
+
+    <div class="row justify-content-center">
+          <form class="col-11 col-lg-6">
+              <div class="row p-1">
+                <div class="col-6">Demitido</div>
+                <div class="col-6">{{employee?.isActive == true ? 'Não' : 'Sim'}}</div>
+              </div>
+
+              <div class="row p-1 bg-gray">
+                  <div class="col-6">Salário</div>
+                  <div class="col-6">{{employee?.salary | currency: 'BRL': 'symbol'}}</div>
+              </div>
+
+              <div class="row p-1">
+                  <div class="col-6">CPF</div>
+                  <div class="col-6">{{employee?.cpf}}</div>
+              </div>
+
+              <div class="row p-1 bg-gray">
+                  <div class="col-6">CNH</div>
+                  <div class="col-6">{{employee?.chn ? 'Sim' : 'Não' }}</div>
+              </div>
+
+              <div class="row p-1">
+                  <div class="col-6">Inglês</div>
+                  <div class="col-6">{{ employee?.english }}</div>
+              </div>
+
+              <div class="row p-1 bg-gray">
+                  <div class="col-6">Escolaridade</div>
+                  <div class="col-6">{{employee?.schooling + ' Completo'}}</div>
+              </div>
+
+              <div class="row p-1">
+                  <div class="col-6">Sexo</div>
+                  <div class="col-6">{{employee?.gender == 'm' ? 'Masculino' : 'Feminino'}}</div>
+              </div>
+
+              <div class="row p-1 bg-gray">
+                  <div class="col-6">Estado Civil</div>
+                  <div class="col-6">{{employee?.maritalStatus}}</div>
+              </div>
+
+              <div class="row p-1">
+                  <div class="col-6">Nascimento</div>
+                  <div class="col-6">{{employee?.birth | date: 'dd/MM/yyyy'}}</div>
+              </div>
+
+              <div class="row p-1 bg-gray">
+                      <div class="col-6">Idade</div>
+                      <div class="col-6">{{age}}</div>
+              </div>
+          </form>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+          <div class="row justify-content-center">
+
+              <div class="col-12 col-lg-6 mb-3">
+                  <button (click)="demiss(employee.id)" [disabled]="!employee?.isActive" class="btn btn-danger btn-block btn-sm">Demitir</button>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- End Employee Detail -->

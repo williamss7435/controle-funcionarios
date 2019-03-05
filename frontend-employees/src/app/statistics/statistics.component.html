@@ -1,0 +1,90 @@
+ <!-- Start Statistics -->
+ <section class="container-fluid" style="margin-top: 55px;">
+
+  <div class="row text-center mb-3 title-statistics">
+      <div class="col-12">
+          Estatísticas
+      </div>
+  </div>
+
+<div class="row">
+      <div class="col-lg-4 statistics-employee mt-2">
+          <div class="statistics-employees p-2">
+              <div class="col-12 title text-center">Dados Da Sua Empresa</div>
+              <div class="row mt-2">
+                  <div class="col-7">Médida de Idade</div>
+                  <div class="col-4">{{statistics?.data.avgYears | number: '1.0-0'}}</div>
+              </div>
+              <div class="row">
+                  <div class="col-7">Ensino Superior</div>
+                  <div class="col-4">{{statistics?.data.university| percent}}</div>
+              </div>
+              <div class="row">
+                  <div class="col-7">Possui CNH</div>
+                  <div class="col-4">{{statistics?.data.avgCnh | percent}}</div>
+              </div>
+              <div class="row">
+                  <div class="col-7">Casados</div>
+                  <div class="col-4">{{statistics?.data.married | percent}}</div>
+              </div>
+              <div class="row">
+                <div class="col-7">Solteiros</div>
+                <div class="col-4">{{ 1 - statistics?.data.married | percent}}</div>
+            </div>
+              <div class="row">
+                  <div class="col-7">Inglês Básico</div>
+                  <div class="col-4">{{statistics?.data.englishBasic | percent}}</div>
+              </div>
+              <div class="row">
+                  <div class="col-7">Inglês Intermediario</div>
+                  <div class="col-4">{{statistics?.data.englishIntermediate | percent}}</div>
+              </div>
+              <div class="row pb-2">
+                  <div class="col-7">Inglês Avançado</div>
+                  <div class="col-4">{{statistics?.data.englishAdvanced | percent}}</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4">
+          <div class="statistics-gender p-2 mt-2">
+              <div class="col-12 title text-center">Genero</div>
+              <div class="row mt-2 p-2">
+                  <canvas id="employees-gender" height="132"></canvas>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4">
+          <div class="higher-salary p-2 mt-2">
+              <div class="col-12 title text-center">Maior Salário</div>
+              <div class="row text-center">
+                  <div class="col-12 salary">{{statistics?.data.maxSalary | currency: 'BRL': 'symbol'}}</div>
+              </div>
+          </div>
+          <div class="lower-salary p-2 mt-2">
+              <div class="col-12 title text-center">Menor Salário</div>
+              <div class="row text-center">
+                  <div class="col-12 salary">{{statistics?.data.minSalary | currency: 'BRL': 'symbol'}}</div>
+              </div>
+          </div>
+          <div class="avg-salary p-2 mt-2">
+            <div class="col-12 title text-center">Média de Salarial</div>
+            <div class="row text-center">
+                <div class="col-12 salary">{{statistics?.data.avgSalary | currency: 'BRL': 'symbol'}}</div>
+            </div>
+        </div>
+      </div>
+</div>
+</section>
+<section class="container-fluid mt-2 mb-5">
+  <div class="salaries-info p-2">
+      <div class="col-12 title mb-3 text-center">Salários</div>
+      <div class="row">
+          <div class="col-12">
+              <canvas id="salaries" height="100"></canvas>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End Statistics -->

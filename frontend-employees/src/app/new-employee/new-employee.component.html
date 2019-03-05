@@ -1,0 +1,92 @@
+<!-- Start New Employee -->
+<section class="container-fluid" style="margin-top: 75px;">
+      
+  <div class="col-12 title-new-employee">Novo Usuario</div>
+   <div class="row">
+       <div class="col-12">
+           <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form-new-employee p-2 pb-5">
+             <div class="form-row">
+                 <div class="form-group col-md-6">
+                     <label for="name">Nome <small class="text-danger" *ngIf="f.name.errors && f.name.touched">(Digite pelo menos 4 letras)</small></label>
+                     <input [class.is-valid]="!f.name.errors && f.name.touched" [class.is-invalid]="f.name.errors && f.name.touched" formControlName="name" type="text" class="form-control" placeholder="Nome Completo">
+                 </div>
+                 <div class="form-group col-md-3">
+                     <label for="rg">RG <small class="text-danger" *ngIf="f.rg.errors && f.rg.touched">(RG possui 9 Digitos)</small></label>
+                     <input (keyup)="onlyNumber($event, rg)" #rg [class.is-valid]="!f.rg.errors && f.rg.touched" [class.is-invalid]="f.rg.errors && f.rg.touched" formControlName="rg" type="text" class="form-control" placeholder="RG">
+                 </div>
+                 <div class="form-group col-md-3">
+                    <label for="cpf">CPF <small class="text-danger" *ngIf="f.cpf.errors && f.cpf.touched">(CPF possui 11 Digitos)</small></label>
+                    <input (keyup)="onlyNumber($event, cpf)" #cpf [class.is-valid]="!f.cpf.errors && f.cpf.touched" [class.is-invalid]="f.cpf.errors && f.cpf.touched" formControlName="cpf" type="text" class="form-control" placeholder="CPF">
+                </div>
+             </div>
+
+             <div class="form-row">
+                 <div class="form-group col-md-5">
+                     <label for="office">Cargo <small class="text-danger" *ngIf="f.office.errors && f.office.touched">(Campo Obrigatório)</small></label>
+                     <input [class.is-valid]="!f.office.errors && f.office.touched" [class.is-invalid]="f.office.errors && f.office.touched" formControlName="office" type="text" class="form-control" placeholder="Cargo do funcionário">
+                 </div>
+                 <div class="form-group col-md-5">
+                     <label for="sector">Setor <small class="text-danger" *ngIf="f.sector.errors && f.sector.touched">(Campo Obrigatório)</small></label>
+                     <input [class.is-valid]="!f.sector.errors && f.sector.touched" [class.is-invalid]="f.sector.errors && f.sector.touched" formControlName="sector" type="text" class="form-control" placeholder="Setor da Empresa">
+                 </div>
+                 <div class="form-group col-md-2">
+                     <label for="salary">Salário <small class="text-danger" *ngIf="f.salary.errors && f.salary.touched">(Campo Obrigatório)</small></label>
+                     <input [class.is-valid]="!f.salary.errors && f.salary.touched" [class.is-invalid]="f.salary.errors && f.salary.touched" formControlName="salary" type="number" class="form-control" placeholder="Salário">
+                 </div>
+              </div>
+              
+              <div class="form-row">
+                 <div class="form-group col-md-2">
+                     <label for="gender">Sexo</label>
+                     <select [class.is-valid]="!f.gender.errors && f.gender.touched" [class.is-invalid]="f.gender.touched && f.gender.errors" formControlName="gender" id="gender" class="form-control">
+                         <option selected value="">Escolha...</option>
+                         <option value="m">Masculino</option>
+                         <option value="f">Feminino</option>
+                     </select>
+                 </div>
+                 <div class="form-group col-md-2">
+                     <label for="marital-status">Estado Civil</label>
+                     <select [class.is-valid]="!f.maritalStatus.errors && f.maritalStatus.touched" [class.is-invalid]="f.maritalStatus.touched && f.maritalStatus.errors" formControlName="maritalStatus" id="marital-status" class="form-control">
+                          <option selected value="">Escolha...</option>
+                         <option value="Solteiro">Solteiro</option>
+                         <option value="Casado">Casado</option>
+                     </select>
+                 </div>
+                 <div class="form-group col-md-2">
+                     <label for="english">Inglês</label>
+                     <select [class.is-valid]="!f.english.errors && f.english.touched" [class.is-invalid]="f.english.touched && f.english.errors" formControlName="english" id="english" class="form-control">
+                         <option selected value="">Escolha...</option>
+                         <option value="Basico">Básico</option>
+                         <option value="Intermediario">Intermediário</option>
+                         <option value="Avançado">Avançado</option>
+                     </select>
+                 </div>
+                 <div class="form-group col-md-2">
+                     <label for="schooling">Escolaridade</label>
+                     <select [class.is-valid]="!f.schooling.errors && f.schooling.touched" [class.is-invalid]="f.schooling.touched && f.schooling.errors" formControlName="schooling" id="schooling" class="form-control">
+                         <option selected value="">Escolha...</option>
+                         <option value="Fundamental">Fundamental Completo</option>
+                         <option value="Médio">Médio Completo</option>
+                         <option value="Superior">Superior Completo</option>
+                     </select>
+                 </div>
+                 <div class="form-group col-md-2">
+                     <label for="schooling">CNH</label>
+                     <select [class.is-valid]="!f.cnh.errors && f.cnh.touched" [class.is-invalid]="f.cnh.touched && f.cnh.errors" formControlName="cnh" id="schooling" class="form-control">
+                         <option selected value=""></option>
+                         <option value="0">Não Possui CNH</option>
+                         <option value="1">Possui CNH</option>
+                     </select>
+                 </div>
+                 <div class="form-group col-md-2 pb-3">
+                     <label for="salary">Nascimento</label>
+                     <input [class.is-valid]="!f.birth.errors && f.birth.touched" [class.is-invalid]="f.birth.touched && f.birth.errors" formControlName="birth" type="date" class="form-control" name="birth" id="birth">
+                 </div>
+              </div>
+              <button [disabled]="!employeeForm.valid" type="submit" class="btn btn-success mr-2">Cadastrar</button>
+              <button routerLink="/employees" class="btn btn-danger">Cancelar</button>
+           </form>
+       </div>
+   </div>
+ </section>
+ <!-- End New Employee -->
