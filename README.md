@@ -45,6 +45,6 @@
 > Gráficos gerados com ChartJs
 
 **Web**<br>
-![Estatistics Web](https://user-images.githubusercontent.com/37387374/53827413-cae2a100-3f59-11e9-9597-3374a0b5ce1b.jpg)<br><br>
+![estatistics](https://user-images.githubusercontent.com/37387374/53830348-fddc6300-3f60-11e9-9766-ad10f5cd53bb.jpg)<br><br>
 **Mobile**<br>
 ![Estatistics Mobile](https://user-images.githubusercontent.com/37387374/53827382-b3a3b380-3f59-11e9-9a3a-d24a5fd4b1af.jpg)
